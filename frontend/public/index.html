@@ -746,7 +746,7 @@ async function renderOverview() {
     ]);
     state.stats = stats; state.employees = emps;
     document.getElementById('stats-grid').innerHTML = `
-      <div class="stat-card"><div class="stat-label">Total Employees</div><div class="stat-value">${stats.total}</div><div class="stat-sub">All time</div></div>
+      <div class="stat-card"><div class="stat-label">Total Employees</div><div class="stat-value" style="color:var(--accent)">${stats.total}</div><div class="stat-sub">All time</div></div>
       <div class="stat-card"><div class="stat-label">Active</div><div class="stat-value" style="color:var(--accent2)">${stats.active}</div><div class="stat-sub">Currently active</div></div>
       <div class="stat-card"><div class="stat-label">This Month</div><div class="stat-value" style="color:var(--warn)">${stats.thisMonth}</div><div class="stat-sub">New joinings</div></div>
       <div class="stat-card"><div class="stat-label">Inactive</div><div class="stat-value" style="color:var(--danger)">${stats.inactive}</div><div class="stat-sub">Deactivated</div></div>
