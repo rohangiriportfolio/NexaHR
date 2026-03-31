@@ -204,7 +204,24 @@ label { display: block; font-size: 12px; font-weight: 500; color: var(--muted); 
 }
 .input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(79,139,255,0.12); }
 .input::placeholder { color: var(--muted2); }
-select.input option { background: var(--card); }
+select.input option { background: var(--card); color: var(--muted2); }
+select.input{ color: var(--muted2); }
+
+input[type="date"] {
+    color: var(--muted2); 
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(33%) sepia(13%) saturate(1008%) hue-rotate(186deg) brightness(96%) contrast(89%);
+}
+
+input[type="password"]::-ms-reveal {
+    filter: invert(33%) sepia(13%) saturate(1008%) hue-rotate(186deg) brightness(96%) contrast(89%);
+}
+
+input[type="password"]::-ms-clear {
+    filter: invert(33%) sepia(13%) saturate(1008%) hue-rotate(186deg) brightness(96%) contrast(89%);
+}
 
 /* ══════════════════════════════════════════════
    BUTTONS
@@ -342,6 +359,7 @@ select.input option { background: var(--card); }
   padding: 9px 14px; color: var(--text); outline: none;
   transition: all 0.2s; font-size: 13px;
 }
+.search-input::placeholder { color: var(--muted2); }
 .search-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(79,139,255,0.1); }
 .filter-select {
   background: var(--surface); border: 1px solid var(--border2);
